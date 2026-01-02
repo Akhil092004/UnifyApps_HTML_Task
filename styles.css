@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+}
+
+
+.container-main{
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.header{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.header p{
+    color: #555555;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.field{
+    width: 100%;
+}
+
+.form-row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #1a1a1a;
+    background-color: white;
+    transition: border-color 0.2s;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    input[type="tel"]:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #000;
+}
+
+
+input::placeholder,
+    select option:first-child,
+    textarea::placeholder {
+        color: #999;
+}
+
+.gender-option input[type="radio"] {
+        display: none;
+}
+
+.gender-options{
+    display: flex;
+    gap: 20px;
+}
+
+.gender-option input[type="radio"]:checked + label {
+    background-color: #f0f0f0;
+    border-color: #000;
+}
+.gender-option {
+    flex:1;
+}
+
+.gender-option label{
+    display: block;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;;
+}
+
+.field textarea {
+    min-height: 180px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+.button-group{
+    display: flex;
+    gap: 20px;
+}
+
+#reset-btn, #submit-btn{
+    padding: 14px 32px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 200px
+}
+
+#submit-btn{
+    background-color: #000;
+    color: white;
+}
+
+#reset-btn{
+    background-color: #f0f0f0;
+    color: #1a1a1a;
+}
+
+@media (max-width:640px) {
+    .form-row{
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+    .gender-options{
+        flex-direction: column;
+        gap: 16px;
+        text-align: start;
+    }
+    .gender-option label{
+        text-align: start;
+    }
+}
